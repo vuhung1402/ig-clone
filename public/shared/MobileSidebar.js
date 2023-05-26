@@ -39,7 +39,7 @@ function MobileSidebar ()
                     <div className={`${select === 3 ? "hidden" : "flex"} justify-center items-center`}> {CreateIcon} </div>
                     <div className={`${select === 3 ? "flex" : "hidden"} justify-center items-center`}> {CreateSelectIcon} </div>
                 </Link>
-                <Link href={"/"} onClick={() => { setSelect(4) }}>
+                <Link href={"/messages"} onClick={() => { setSelect(4) }}>
                     <div className={`${select === 4 ? "hidden" : "flex"} justify-center items-center`}> {MessagesIcon} </div>
                     <div className={`${select === 4 ? "flex" : "hidden"} justify-center items-center`}> {MessagesSelectIcon} </div>
                 </Link>

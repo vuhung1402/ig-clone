@@ -250,7 +250,7 @@ function AccountPage() {
             (<div className="flex items-center justify-center h-screen w-screen"> <Loading/> </div>) :
             (
             <div className="w-full sm:flex">
-                <div className="fixed"> <Sidebar/> </div>
+                <div className="hidden sm:block"> <Sidebar/> </div>
                 <div className = {isEdit ? "block" : "hidden"}>
                     <EditPopUp handleClose = { handleEditPopUp }/>
                 </div>
@@ -264,7 +264,7 @@ function AccountPage() {
                     <FollowersPopUp handleClose = {handleFollowersPopUp} isFollowing = {isFollowing} userData = {isUser(username) ? userData : otherUser} isUser = {isUser} getFollower = {getFollower} getFollowing = {getFollowing} />
                 </div>
 
-                <div className="flex flex-col pb-[10px] pt-[40px] sm:ml-[245px] md:max-lg:ml-[70px] w-full">
+                <div className="flex flex-col pb-[10px] pt-[40px] sm:h-screen sm:overflow-y-scroll sm:scrollbar-hide md:max-lg:ml-[70px] w-full">
                     <div className="flex border-b-[1px] sm:mx-[30px] pb-[10px] gap-3 sm:gap-0">
                         <label htmlFor="uploadAvatar" className="w-[30%] sm:w-[290px] sm:h-[150px] sm:px-[20px] flex justify-center cursor-pointer">
                             <img
@@ -443,7 +443,7 @@ function AccountPage() {
                     </div>
                 </div>
 
-                <div className="fixed bottom-2 right-0 left-0 sm:hidden">
+                <div className="fixed bottom-2 right-0 left-0 z-50 sm:hidden">
                     <MobileSidebar/>
                 </div>
 
