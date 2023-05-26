@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { useEffect } from "react"
 import AVT from "../../public/img/default-avatar.png"
+import Router, { useRouter } from "next/router"
 
 function SearchResult ({ item })
 {
@@ -9,8 +10,14 @@ function SearchResult ({ item })
         console.log(item?.avatar.length);
     },[])
 
+    const router = useRouter()
+
+    const handleClickSearchResult = () => {
+        router.push(`/user/${item?.username}`)
+    }
+
     return (
-        <div className="flex w-full items-center select-none cursor-pointer hover:bg-[rgb(250,250,250)]" style={{padding:"0 20px", height:"60px"}}>
+        <div onClick={handleClickSearchResult} className="flex w-full items-center select-none cursor-pointer hover:bg-[rgb(250,250,250)]" style={{padding:"0 20px", height:"60px"}}>
             <div className="w-[44px] h-[44px]" style={{margin:"0 10px 0 0 "}}>
                 {
                     item?.avatar.length > 0 
