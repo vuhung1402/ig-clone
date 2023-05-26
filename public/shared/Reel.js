@@ -28,8 +28,6 @@ function Reels({userData, isUser}) {
         });
     }, [userData])
 
-    console.log("reels: ", reels)
-
     return(
         <div>
             { reels?.length == 0 ?
