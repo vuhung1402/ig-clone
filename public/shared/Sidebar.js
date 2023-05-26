@@ -68,11 +68,11 @@ function Sidebar ()
                                 <div className={`lg:pl-2 md:justify-center md:items-center text-black ${select === 0 ? "flex" : "hidden"}`}>{HomeSelectIcon}</div>
                                 <div className={`font-[500] ml-5 md:hidden lg:justify-center lg: items-center ${state === 1 ? "lg:hidden" : `${state === 2 ? "lg:hidden" : "lg:flex"}`}`} >Home</div>
                             </Link>
-                            <Link className="flex lg:mx-5 lg:h-[56px] md:h-[48px] lg:justify-start md:justify-center items-center hover:bg-[rgb(250,250,250)] rounded-[25px]" href="/" onClick={() => {setState(1); setSelect(1); setShowSearch(true)}} ref={searchRef}>
+                            <div className="flex lg:mx-5 lg:h-[56px] md:h-[48px] lg:justify-start md:justify-center items-center hover:bg-[rgb(250,250,250)] rounded-[25px]" onClick={() => {setState(1); setSelect(1); setShowSearch(!showSearch)}} ref={searchRef}>
                                 <div className={`lg:pl-2 md:justify-center md:items-center ${select === 1 ? "hidden" : "flex"}`}>{SearchIcon}</div>
                                 <div className={`lg:pl-2 md:justify-center md:items-center ${select === 1 ? "flex" : "hidden"}`}>{SearchSelectIcon}</div>
                                 <div className={`font-[500] ml-5 md:hidden lg:justify-center lg: items-center ${state === 1 ? "lg:hidden" : `${state === 2 ? "lg:hidden" : "lg:flex"}`}`}>Search</div>
-                            </Link>
+                            </div>
                             <Link className="flex lg:mx-5 lg:h-[56px] md:h-[48px] lg:justify-start md:justify-center items-center hover:bg-[rgb(250,250,250)] rounded-[25px]" href="/" onClick={() => {setState(0); setSelect(2)}}>
                                 <div className={`lg:pl-2 md:justify-center md:items-center ${select === 2 ? "hidden" : "flex"}`}>{Explore}</div>
                                 <div className={`lg:pl-2 md:justify-center md:items-center ${select === 2 ? "flex" : "hidden"}`}>{ExploreSelectIcon}</div>
@@ -83,7 +83,7 @@ function Sidebar ()
                                 <div className={`lg:pl-2 md:justify-center md:items-center ${select === 3 ? "flex" : "hidden"}`}>{ReelSelectIcon}</div>
                                 <div className={`font-[500] ml-5 md:hidden lg:justify-center lg: items-center ${state === 1 ? "lg:hidden" : `${state === 2 ? "lg:hidden" : "lg:flex"}`}`}>Reels</div>
                             </Link>
-                            <Link className="flex lg:mx-5 lg:h-[56px] md:h-[48px] lg:justify-start md:justify-center items-center hover:bg-[rgb(250,250,250)] rounded-[25px]" href="/" onClick={() => {setState(0); setSelect(4)}}>
+                            <Link className="flex lg:mx-5 lg:h-[56px] md:h-[48px] lg:justify-start md:justify-center items-center hover:bg-[rgb(250,250,250)] rounded-[25px]" href="/messages" onClick={() => {setState(0); setSelect(4)}}>
                                 <div className={`lg:pl-2 md:justify-center md:items-center ${select === 4 ? "hidden" : "flex"}`}>{MessagesIcon}</div>
                                 <div className={`lg:pl-2 md:justify-center md:items-center ${select === 4 ? "flex" : "hidden"}`}>{MessagesSelectIcon}</div>
                                 <div className={`font-[500] ml-5 md:hidden lg:justify-center lg: items-center ${state === 1 ? "lg:hidden" : `${state === 2 ? "lg:hidden" : "lg:flex"}`}`}>Messages</div>
@@ -105,11 +105,11 @@ function Sidebar ()
                         </div>
                     </div>
                     <div className="flex flex-col w-full relative" ref={morePopUpRef}>
-                        <Link className="flex lg:mx-5 lg:h-[56px] md:h-[48px] lg:justify-start md:justify-center items-center hover:bg-[rgb(250,250,250)] rounded-[25px]" href="/" onClick={() => {setState(0); setSelect(7); setShowMore(!showMore)}}>
+                        <div className="flex lg:mx-5 lg:h-[56px] md:h-[48px] lg:justify-start md:justify-center items-center hover:bg-[rgb(250,250,250)] rounded-[25px]" onClick={() => {setState(0); setSelect(7); setShowMore(!showMore)}}>
                             <div className={`lg:pl-2 md:justify-center md:items-center ${select === 7 ? "hidden" : "flex"}`}>{MoreIcon}</div>
                             <div className={`lg:pl-2 md:justify-center md:items-center ${select === 7 ? "flex" : "hidden"}`}>{MoreSelectIcon}</div>
                             <div className={`font-[500] ml-5 md:hidden lg:justify-center lg: items-center ${state === 1 ? "lg:hidden" : `${state === 2 ? "lg:hidden" : "lg:flex"}`}`}>More</div>
-                        </Link>
+                        </div>
                         <div className="absolute bottom-14 left-2">
                             {
                                 showMore ? (<More />) : (<></>)
