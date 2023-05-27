@@ -46,9 +46,9 @@ function PostsContent ({post}) {
     return(
         <div onClick={handlePostPopUp}>
             { post.media[0].type == "img" ? 
-                (<img className="sm:max-h-[300px] max-h-[100px] sm:max-w-[300px] max-w-[100px]" src={post.media[0].url} alt = "post"/>) : 
+                (<img className="sm:max-h-[300px] max-h-[90px] sm:max-w-[300px] max-w-[90px]" src={post.media[0].url} alt = "post"/>) : 
 
-                (<video className="sm:max-h-[300px] max-h-[100px] sm:max-w-[300px] max-w-[100px]" src={post.media[0].url} alt = "post" autoPlay muted/>)
+                (<video className="sm:max-h-[300px] max-h-[90px] sm:max-w-[300px] max-w-[90px]" src={post.media[0].url} alt = "post" autoPlay muted/>)
             } 
 
             <div className=" absolute group-hover:flex justify-evenly items-center inset-0 hidden bg-[rgba(35,35,35,0.16)]">
